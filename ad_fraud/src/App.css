@@ -1,10 +1,23 @@
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
   height: 100vh;
   position: relative;
-  background-color: #92b8e1;
   padding-top: 50px;
+  border: 5px solid #003366;
+  background: linear-gradient(135deg, #92b8e1, #d3d3d3); /* Blue to grey */
+  overflow: hidden;
 }
 
 .heading {
@@ -27,7 +40,7 @@
   position: relative;
 }
 
-.link-box {
+.link {
   width: 150px;
   padding: 15px;
   text-align: center;
@@ -37,18 +50,36 @@
   background-color: #e6f0ff;
   color: #003366;
   font-weight: bold;
-  transition: transform 0.3s, background-color 0.3s;
   position: absolute;
+  opacity: 0;
+  animation: fadeInMove 0.8s ease forwards;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
-.link-box:hover {
+.link:hover {
   transform: scale(1.05);
   background-color: #cce6ff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.top-left { top: 0; left: 10%; }
-.top-right { top: 0; right: 10%; }
-.center-left { top: 40%; left: 5%; }
-.center-right { top: 40%; right: 5%; }
-.bottom-left { bottom: 10%; left: 20%; }
-.bottom-right { bottom: 10%; right: 20%; }
+/* Positioning */
+.link:nth-child(1) { top: 0; left: 10%; animation-delay: 0.1s; }
+.link:nth-child(2) { top: 0; right: 10%; animation-delay: 0.2s; }
+.link:nth-child(3) { top: 40%; left: 5%; animation-delay: 0.3s; }
+.link:nth-child(4) { top: 40%; right: 5%; animation-delay: 0.4s; }
+.link:nth-child(5) { bottom: 10%; left: 20%; animation-delay: 0.5s; }
+.link:nth-child(6) { bottom: 10%; right: 20%; animation-delay: 0.6s; }
+
+.center-logo {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 35%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  animation: fadeInMove 1s ease forwards;
+  border-radius: 12px;
+  
+  z-index: 2; /* ensures it's above background but below buttons */
+}
+
