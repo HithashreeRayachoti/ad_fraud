@@ -36,3 +36,32 @@ plt.xlabel("Predicted")
 plt.ylabel("Actual")
 plt.tight_layout()
 plt.show()
+
+
+from sklearn.preprocessing import LabelEncoder
+
+le = LabelEncoder()
+y_test_encoded = le.fit_transform(y_test)
+
+# Load GBM model
+model = joblib.load("savedModels/gradient_boosting_classifier.joblib")
+
+# Predict
+y_pred = model.predict(X_test)
+
+# Evaluation
+print("\n=== Accuracy GBM ===")
+print(f"{accuracy_score(y_test_encoded, y_pred):.4f}")
+
+print("\n=== Classification Report GBM ===")
+print(classification_report(y_test_encoded, y_pred, target_names=le.classes_))
+
+# Confusion matrix
+cm = confusion_matrix(y_test_encoded, y_pred)
+plt.figure(figsize=(6, 4))
+sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=le.classes_, yticklabels=le.classes_)
+plt.title("GBM: Test Set Confusion Matrix")
+plt.xlabel("Predicted")
+plt.ylabel("Actual")
+plt.tight_layout()
+plt.show()
