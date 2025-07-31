@@ -13,9 +13,9 @@ MODEL_PATHS = MODEL_PATH = os.path.join('..', 'MachineLearning', 'savedModels', 
 LOG_FILE = "click_logs.json"
 try:
     model = joblib.load(MODEL_PATH)
-    print("✅ ML Model loaded successfully.")
+    print("ML Model loaded successfully.")
 except FileNotFoundError:
-    print(f"❌ Error: Model file not found at {MODEL_PATH}")
+    print(f"Error: Model file not found at {MODEL_PATH}")
     model = None
 
 # Define the exact feature names in the order the model was trained on
@@ -81,7 +81,7 @@ def home():
 #         "total_behaviour": data.get("total_behaviour", []),
 #         "mousemove_times": data.get("mousemove_times", []),
 #         "mousemove_total_behaviour": data.get("mousemove_total_behaviour", []),
-#         "Mousemove_visited_urls": data.get("Mousemove_visited_urls", 0)  # ✅ New field
+#         "Mousemove_visited_urls": data.get("Mousemove_visited_urls", 0)  # New field
 #     }
 
 #     print(f"[{log_entry['timestamp']}] Session: {log_entry['session_id']} from {log_entry['ip']}")
@@ -140,7 +140,7 @@ def log_visit():
     return jsonify({"status": "ok", "prediction": prediction_label})
 
 # if __name__ == '__main__':
-#     print(" Backend is running. Listening at: http://localhost:5000")
+#     print("Backend is running. Listening at: http://localhost:5000")
 #     app.run(debug=True, port=5000)
 
 @app.route('/api/sessions', methods=['GET'])
@@ -166,5 +166,5 @@ def get_sessions():
 
 
 if __name__ == '__main__':
-    print("✅ Backend is running. Listening at: http://localhost:5000")
+    print("Backend is running. Listening at: http://localhost:5000")
     app.run(debug=True, port=5000)

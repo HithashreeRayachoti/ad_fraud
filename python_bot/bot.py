@@ -44,13 +44,13 @@ links = driver.find_elements(By.CLASS_NAME, "link")
 valid_links = [link for link in links if link.get_attribute("href")]
 
 if not valid_links:
-    print("❌ No valid links found.")
+    print("No valid links found.")
     driver.quit()
     exit()
 
 selected_link = random.choice(valid_links)
 href = selected_link.get_attribute("href")
-print(f"👉 Clicking: {href}")
+print(f"Clicking: {href}")
 selected_link.click()
 
 time.sleep(4)  # simulate user reading new page
@@ -62,16 +62,16 @@ if len(driver.window_handles) > 1:
     driver.switch_to.window(new_window)
     driver.close()
     driver.switch_to.window(original_window)
-    print("🔁 Switched back to original tab.")
+    print("Switched back to original tab.")
 
 # --- Manually trigger endTracking() ---
 time.sleep(2)
 try:
     driver.execute_script("endTracking()")
-    print("📤 endTracking() triggered manually.")
+    print("endTracking() triggered manually.")
 except Exception as e:
-    print("❌ Failed to call endTracking():", e)
+    print("Failed to call endTracking():", e)
 
 time.sleep(2)  # allow tracking to complete
-print("✅ Done. Closing browser.")
+print("Done. Closing browser.")
 driver.quit()

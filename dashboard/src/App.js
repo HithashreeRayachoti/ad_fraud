@@ -71,7 +71,7 @@ export default function Dashboard() {
         }}
       >
         <h2 style={{ textAlign: "center", color: "#1a237e", marginBottom: 32 }}>
-          📊 Ad Fraud Analytics Dashboard
+          Ad Fraud Analytics Dashboard
         </h2>
         <a
           href="/"
@@ -145,7 +145,7 @@ export default function Dashboard() {
 
         {/* Logs Section */}
         <div style={{ marginTop: 48 }}>
-          <h4 style={{ color: "#37474f" }}>📝 Latest Click Logs</h4>
+          <h4 style={{ color: "#37474f" }}>Latest Click Logs</h4>
           <div
             style={{
               maxHeight: 300,

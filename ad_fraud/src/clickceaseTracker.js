@@ -34,7 +34,7 @@ function endTracking() {
     total_behaviour: totalBehaviour,
     mousemove_times: mousemoveTimes,
     mousemove_total_behaviour: mousemoveTotalBehaviour,
-    Mousemove_visited_urls: hoveredUrls.size // 👈 New field added
+    Mousemove_visited_urls: hoveredUrls.size // New field added
   };
 
   fetch("http://localhost:5000/log-visit", {
@@ -46,12 +46,12 @@ function endTracking() {
     keepalive: true
   }).then(res => {
     if (!res.ok) {
-      console.error("❌ Failed to send tracking data:", res.statusText);
+      console.error("Failed to send tracking data:", res.statusText);
     } else {
-      console.log("✅ Sent tracking data");
+      console.log("Sent tracking data");
     }
   }).catch(err => {
-    console.error("❌ Error sending tracking data:", err);
+    console.error("Error sending tracking data:", err);
   });
 }
 
