@@ -36,6 +36,7 @@ function App() {
         <Route path="/" element={
           <div className="App">
             <h1 className="heading">Welcome to Our Ad Landing Page</h1>
+            <h2 className="subheading">This is where a user or a bot will land after clicking on the ad which is present on the publisher website</h2>
             <p className="subheading">This simulates what happens when someone clicks on your ad.</p>
 
             {/* ✅ Centered image below heading */}
@@ -47,10 +48,10 @@ function App() {
 
             <div className="link-grid">
               <a className='link' href="https://www.example.com/product1" target="_blank" rel="noopener noreferrer">
-                Product 1
+                Sample box for interaction
               </a>
               <a className='link' href="https://www.example.com/product2" target="_blank" rel="noopener noreferrer">
-                Product 2
+                Another sample box for interaction
               </a>
               <a className='link' href="https://www.example.com/about" target="_blank" rel="noopener noreferrer">
                 About Us
